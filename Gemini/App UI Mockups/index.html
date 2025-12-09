@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVP App UI Mockups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .phone-frame {
+            width: 320px;
+            height: 640px;
+            background-color: white;
+            border-radius: 30px;
+            border: 8px solid #333;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-bar {
+            height: 24px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 16px;
+            align-items: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .screen-content {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-bar {
+            height: 60px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .nav-item {
+            color: #9ca3af;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .nav-item.active {
+            color: #3b82f6;
+        }
+
+        .nav-text {
+            font-size: 9px;
+        }
+
+        /* Specific Components */
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+
+        .btn-outline {
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+            padding: 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .input-field {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .xp-bar-bg {
+            width: 100%;
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .xp-bar-fill {
+            height: 100%;
+            background: #fbbf24;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body class="p-8">
+
+    <h1 class="text-2xl font-bold mb-8 text-center text-gray-700">MVP UI Mockups (9 Screens)</h1>
+
+    <div class="flex flex-wrap gap-8 justify-center">
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content p-6 justify-center">
+                <div class="text-center mb-10">
+                    <div
+                        class="w-16 h-16 bg-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">
+                        Q</div>
+                    <h2 class="text-2xl font-bold text-gray-800">QuizApp</h2>
+                    <p class="text-gray-500 text-sm">学習意欲検証MVP</p>
+                </div>
+                <form>
+                    <label class="block text-xs font-bold text-gray-600 mb-1">メールアドレス</label>
+                    <input type="email" value="user@example.com" class="input-field">
+                    <label class="block text-xs font-bold text-gray-600 mb-1">パスワード</label>
+                    <input type="password" value="********" class="input-field">
+                    <button class="btn-primary mt-4">ログイン</button>
+                    <p class="text-center text-xs text-blue-500 mt-4">パスワードをお忘れの方</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-gray-50">
+                <div class="bg-white p-4 pb-6 shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden"><img
+                                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User"></div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-end mb-1">
+                                <span class="font-bold text-sm">Lv.12</span>
+                                <span class="text-xs text-gray-500">あと 120xp</span>
+                            </div>
+                            <div class="xp-bar-bg">
+                                <div class="xp-bar-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 flex-1 flex flex-col justify-center items-center">
+                    <h3 class="font-bold text-xl text-gray-800 mb-2">今日の目標まであと少し！</h3>
+                    <p class="text-gray-500 text-sm mb-8">連続学習3日目です🔥</p>
+
+                    <button
+                        class="w-48 h-48 rounded-full bg-blue-500 text-white shadow-lg flex flex-col items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fas fa-play text-4xl mb-2"></i>
+                        <span class="font-bold text-lg">今日の問題</span>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item active"><i class="fas fa-home"></i><span class="nav-text">ホーム</span></div>
+                <div class="nav-item"><i class="fas fa-chart-pie"></i><span class="nav-text">データ</span></div>
+                <div class="nav-item"><i class="fas fa-trophy"></i><span class="nav-text">ランク</span></div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content p-4">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-gray-500 font-bold">Q. 3 / 5</span>
+                    <i class="far fa-bookmark text-gray-400 text-xl"></i>
+                </div>
+
+                <div class="mb-8">
+                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2 inline-block">ネットワーク</span>
+                    <h2 class="text-lg font-bold leading-relaxed text-gray-800">
+                        OSI参照モデルにおいて、ルーターが動作するのは第何層ですか？
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <button class="input-field text-left hover:bg-blue-50 border-blue-200">A. 第1層（物理層）</button>
+                    <button class="input-field text-left hover:bg-blue-50 border-blue-200">B. 第2層（データリンク層）</button>
+                    <button class="input-field text-left hover:bg-blue-50 border-blue-200">C. 第3層（ネットワーク層）</button>
+                    <button class="input-field text-left hover:bg-blue-50 border-blue-200">D. 第4層（トランスポート層）</button>
+                </div>
+            </div>
+            <div class="p-4 border-t">
+                <button class="btn-primary opacity-50">回答する</button>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content p-4 relative">
+                <div
+                    class="absolute top-20 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-white px-4 py-1 rounded-full shadow-lg font-bold animate-bounce z-10">
+                    +15 XP GET!
+                </div>
+
+                <div class="text-center mb-4">
+                    <div
+                        class="w-16 h-16 rounded-full border-4 border-green-500 flex items-center justify-center text-green-500 text-3xl mx-auto mb-2">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-green-600">正解！</h2>
+                </div>
+
+                <div class="card bg-blue-50 border-blue-100">
+                    <p class="font-bold text-sm text-gray-700 mb-2">解説</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        ルーターは異なるネットワーク同士を接続する機器であり、IPアドレスを見て経路制御を行います。これはOSI参照モデルの<strong>第3層（ネットワーク層）</strong>の役割です。
+                    </p>
+                </div>
+
+                <div class="mt-auto space-y-2">
+                    <button class="btn-primary">完璧！次へ <i class="fas fa-arrow-right ml-2"></i></button>
+                    <div class="flex gap-2">
+                        <button class="flex-1 btn-outline text-xs">復習リストへ</button>
+                        <button class="flex-1 btn-outline text-xs text-gray-400 border-gray-300">解説不十分</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-gray-50">
+                <div class="bg-blue-600 p-6 text-white text-center rounded-b-3xl mb-4">
+                    <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-2 overflow-hidden"><img
+                            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User"></div>
+                    <h2 class="text-2xl font-bold">Lv.12</h2>
+                    <p class="text-blue-100 text-sm mb-3">Total XP: 1,450</p>
+                    <div class="w-full bg-blue-800 h-2 rounded-full overflow-hidden">
+                        <div class="h-full bg-yellow-400 w-3/4"></div>
+                    </div>
+                </div>
+
+                <div class="px-4">
+                    <h3 class="font-bold text-gray-700 mb-2 text-sm">弱点分析</h3>
+                    <div class="card flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500 block">苦手カテゴリ 1</span>
+                            <span class="font-bold">セキュリティ</span>
+                        </div>
+                        <span class="text-red-500 font-bold text-sm">正答率 40%</span>
+                    </div>
+                    <div class="card flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500 block">苦手カテゴリ 2</span>
+                            <span class="font-bold">アルゴリズム</span>
+                        </div>
+                        <span class="text-orange-500 font-bold text-sm">正答率 55%</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mt-2">
+                        <div class="card text-center py-4">
+                            <div class="text-2xl font-bold text-gray-800">14<span class="text-xs font-normal">日</span>
+                            </div>
+                            <div class="text-xs text-gray-500">連続学習</div>
+                        </div>
+                        <div class="card text-center py-4">
+                            <div class="text-2xl font-bold text-gray-800">230<span class="text-xs font-normal">問</span>
+                            </div>
+                            <div class="text-xs text-gray-500">回答済み</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item"><i class="fas fa-home"></i><span class="nav-text">ホーム</span></div>
+                <div class="nav-item active"><i class="fas fa-chart-pie"></i><span class="nav-text">データ</span></div>
+                <div class="nav-item"><i class="fas fa-trophy"></i><span class="nav-text">ランク</span></div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-white">
+                <div class="p-4 border-b flex justify-between items-center sticky top-0 bg-white z-10">
+                    <h2 class="font-bold text-lg">ブックマーク</h2>
+                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">全8問</span>
+                </div>
+
+                <div class="p-4 space-y-3">
+                    <button class="btn-primary mb-4">保存した問題をテストする</button>
+
+                    <div class="card p-3 flex gap-3 items-start">
+                        <div class="flex-1">
+                            <span class="text-[10px] bg-red-100 text-red-600 px-1 rounded">セキュリティ</span>
+                            <p class="text-sm font-bold mt-1 text-gray-800">SQLインジェクション対策として...</p>
+                        </div>
+                        <i class="fas fa-bookmark text-blue-500"></i>
+                    </div>
+
+                    <div class="card p-3 flex gap-3 items-start">
+                        <div class="flex-1">
+                            <span class="text-[10px] bg-green-100 text-green-600 px-1 rounded">DB</span>
+                            <p class="text-sm font-bold mt-1 text-gray-800">正規化を行う主な目的は...</p>
+                        </div>
+                        <i class="fas fa-bookmark text-blue-500"></i>
+                    </div>
+
+                    <div class="card p-3 flex gap-3 items-start opacity-75">
+                        <div class="flex-1">
+                            <span class="text-[10px] bg-purple-100 text-purple-600 px-1 rounded">法務</span>
+                            <p class="text-sm font-bold mt-1 text-gray-800">著作権の保護期間は...</p>
+                        </div>
+                        <i class="fas fa-bookmark text-blue-500"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item"><i class="fas fa-home"></i><span class="nav-text">ホーム</span></div>
+                <div class="nav-item active"><i class="fas fa-chart-pie"></i><span class="nav-text">データ</span></div>
+                <div class="nav-item"><i class="fas fa-trophy"></i><span class="nav-text">ランク</span></div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-gray-50 p-4">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-arrow-left mr-3 text-gray-500"></i>
+                    <h2 class="font-bold text-gray-800">問題登録 (簡易)</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div>
+                        <label class="text-xs font-bold text-gray-500">問題文</label>
+                        <textarea class="input-field h-20" placeholder="問題文を入力..."></textarea>
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-gray-500">正解の選択肢</label>
+                        <input type="text" class="input-field" placeholder="正解を入力">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-gray-500">不正解の選択肢 (カンマ区切り)</label>
+                        <input type="text" class="input-field" placeholder="誤答1, 誤答2, 誤答3">
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="flex-1">
+                            <label class="text-xs font-bold text-gray-500">カテゴリ</label>
+                            <select class="input-field">
+                                <option>NW</option>
+                                <option>Sec</option>
+                            </select>
+                        </div>
+                        <div class="flex-1">
+                            <label class="text-xs font-bold text-gray-500">付与XP</label>
+                            <input type="number" class="input-field" value="10">
+                        </div>
+                    </div>
+                    <button class="btn-primary bg-gray-800">登録する</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-white">
+                <div class="bg-yellow-400 p-6 pb-10 text-center rounded-b-3xl relative">
+                    <h2 class="font-bold text-white text-xl mb-1">週間ランキング</h2>
+                    <p class="text-yellow-800 text-xs font-bold bg-yellow-300 inline-block px-3 py-1 rounded-full">上位
+                        15% に入っています！</p>
+                </div>
+
+                <div class="px-4 -mt-6">
+                    <div class="card bg-white border-yellow-300 border-2 flex items-center p-3 shadow-md">
+                        <span class="font-bold text-lg w-8 text-center text-gray-400">12</span>
+                        <div class="w-10 h-10 bg-gray-200 rounded-full mx-3 overflow-hidden"><img
+                                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Me"></div>
+                        <div class="flex-1">
+                            <div class="font-bold text-sm">自分</div>
+                            <div class="text-xs text-gray-500">1,450 XP</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mt-4">
+                        <div class="flex items-center p-3 border-b">
+                            <span class="font-bold text-lg w-8 text-center text-yellow-500">1</span>
+                            <div class="w-8 h-8 bg-gray-200 rounded-full mx-3 overflow-hidden"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Annie" alt="1"></div>
+                            <div class="flex-1 font-bold text-sm text-gray-700">S_Sato</div>
+                            <span class="text-sm font-bold text-gray-600">2,100</span>
+                        </div>
+                        <div class="flex items-center p-3 border-b">
+                            <span class="font-bold text-lg w-8 text-center text-gray-400">2</span>
+                            <div class="w-8 h-8 bg-gray-200 rounded-full mx-3 overflow-hidden"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" alt="2"></div>
+                            <div class="flex-1 font-bold text-sm text-gray-700">M_Tanaka</div>
+                            <span class="text-sm font-bold text-gray-600">1,950</span>
+                        </div>
+                        <div class="flex items-center p-3 border-b">
+                            <span class="font-bold text-lg w-8 text-center text-orange-400">3</span>
+                            <div class="w-8 h-8 bg-gray-200 rounded-full mx-3 overflow-hidden"><img
+                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=C" alt="3"></div>
+                            <div class="flex-1 font-bold text-sm text-gray-700">K_Suzuki</div>
+                            <span class="text-sm font-bold text-gray-600">1,820</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item"><i class="fas fa-home"></i><span class="nav-text">ホーム</span></div>
+                <div class="nav-item"><i class="fas fa-chart-pie"></i><span class="nav-text">データ</span></div>
+                <div class="nav-item active"><i class="fas fa-trophy"></i><span class="nav-text">ランク</span></div>
+            </div>
+        </div>
+
+        <div class="phone-frame">
+            <div class="status-bar"><span>9:41</span><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i>
+            </div>
+            <div class="screen-content bg-gray-50">
+                <div class="p-4">
+                    <h2 class="font-bold text-lg mb-4 text-gray-800">おすすめ学習動画</h2>
+
+                    <div class="card p-0 overflow-hidden">
+                        <div class="h-32 bg-gray-800 flex items-center justify-center relative">
+                            <i class="fas fa-play-circle text-4xl text-white opacity-80"></i>
+                            <span
+                                class="absolute bottom-2 right-2 bg-black text-white text-xs px-1 rounded">10:24</span>
+                        </div>
+                        <div class="p-3">
+                            <span
+                                class="text-[10px] text-blue-500 font-bold border border-blue-200 px-1 rounded mb-1 inline-block">弱点克服</span>
+                            <h3 class="font-bold text-sm leading-tight mb-1">【5分でわかる】TCP/IPの基礎基本</h3>
+                            <p class="text-xs text-gray-500">Tech Academy Channel</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-0 overflow-hidden">
+                        <div class="h-32 bg-gray-700 flex items-center justify-center relative">
+                            <i class="fas fa-play-circle text-4xl text-white opacity-80"></i>
+                            <span
+                                class="absolute bottom-2 right-2 bg-black text-white text-xs px-1 rounded">15:00</span>
+                        </div>
+                        <div class="p-3">
+                            <span
+                                class="text-[10px] text-green-500 font-bold border border-green-200 px-1 rounded mb-1 inline-block">新着</span>
+                            <h3 class="font-bold text-sm leading-tight mb-1">SQLのJOINを完全に理解する</h3>
+                            <p class="text-xs text-gray-500">DevSchool</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item active"><i class="fas fa-home"></i><span class="nav-text">ホーム</span></div>
+                <div class="nav-item"><i class="fas fa-chart-pie"></i><span class="nav-text">データ</span></div>
+                <div class="nav-item"><i class="fas fa-trophy"></i><span class="nav-text">ランク</span></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
